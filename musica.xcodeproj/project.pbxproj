@@ -8,21 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		50260D3E285EB10700175ACF /* musicaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D3D285EB10700175ACF /* musicaApp.swift */; };
-		50260D40285EB10700175ACF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D3F285EB10700175ACF /* ContentView.swift */; };
 		50260D42285EB10D00175ACF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50260D41285EB10D00175ACF /* Assets.xcassets */; };
 		50260D45285EB10D00175ACF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50260D44285EB10D00175ACF /* Preview Assets.xcassets */; };
 		50260D4C285EB48B00175ACF /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D4B285EB48B00175ACF /* Profile.swift */; };
 		50260D4E285EBEBB00175ACF /* MusicaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D4D285EBEBB00175ACF /* MusicaUser.swift */; };
+		50260D50285EC29F00175ACF /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D4F285EC29F00175ACF /* AppUser.swift */; };
+		50260D52285EC3D500175ACF /* MusicaVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D51285EC3D500175ACF /* MusicaVideo.swift */; };
+		50260D54285EC63C00175ACF /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D53285EC63C00175ACF /* Tag.swift */; };
+		50260D56285EC7C800175ACF /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D55285EC7C800175ACF /* TagList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		50260D3A285EB10700175ACF /* musica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50260D3D285EB10700175ACF /* musicaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = musicaApp.swift; sourceTree = "<group>"; };
-		50260D3F285EB10700175ACF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		50260D41285EB10D00175ACF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		50260D44285EB10D00175ACF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		50260D4B285EB48B00175ACF /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		50260D4D285EBEBB00175ACF /* MusicaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaUser.swift; sourceTree = "<group>"; };
+		50260D4F285EC29F00175ACF /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
+		50260D51285EC3D500175ACF /* MusicaVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaVideo.swift; sourceTree = "<group>"; };
+		50260D53285EC63C00175ACF /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		50260D55285EC7C800175ACF /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,12 @@
 			isa = PBXGroup;
 			children = (
 				50260D3D285EB10700175ACF /* musicaApp.swift */,
-				50260D3F285EB10700175ACF /* ContentView.swift */,
 				50260D4B285EB48B00175ACF /* Profile.swift */,
+				50260D53285EC63C00175ACF /* Tag.swift */,
+				50260D55285EC7C800175ACF /* TagList.swift */,
 				50260D4D285EBEBB00175ACF /* MusicaUser.swift */,
+				50260D51285EC3D500175ACF /* MusicaVideo.swift */,
+				50260D4F285EC29F00175ACF /* AppUser.swift */,
 				50260D41285EB10D00175ACF /* Assets.xcassets */,
 				50260D43285EB10D00175ACF /* Preview Content */,
 			);
@@ -143,8 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50260D54285EC63C00175ACF /* Tag.swift in Sources */,
+				50260D56285EC7C800175ACF /* TagList.swift in Sources */,
+				50260D50285EC29F00175ACF /* AppUser.swift in Sources */,
 				50260D4E285EBEBB00175ACF /* MusicaUser.swift in Sources */,
-				50260D40285EB10700175ACF /* ContentView.swift in Sources */,
+				50260D52285EC3D500175ACF /* MusicaVideo.swift in Sources */,
 				50260D4C285EB48B00175ACF /* Profile.swift in Sources */,
 				50260D3E285EB10700175ACF /* musicaApp.swift in Sources */,
 			);

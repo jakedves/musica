@@ -10,7 +10,7 @@ import SwiftUI
 struct Profile: View {
     var body: some View {
         ZStack {
-            Color.purple.ignoresSafeArea()
+            Color.purple.ignoresSafeArea() // TODO: Create BGPatttern Protocol, replace with patterns
             
             VStack {
                 profilePicture
