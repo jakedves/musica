@@ -9,6 +9,7 @@ import Foundation
 
 struct MusicaUser: Identifiable, Equatable {
     var id: UUID
+    var profileImage: Data
     var name: String
     var bio: String
     var dob: Date
