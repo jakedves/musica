@@ -12,13 +12,26 @@ struct Tag: View {
     let color: Color
     
     var body: some View {
+        ZStack {
+            textView
+                .padding([.horizontal], Constants.hPadding)
+                .padding([.vertical], Constants.vPadding)
+                .background(color)
+                .cornerRadius(Constants.radius)
+                .glass()
+            textView
+                .foregroundColor(.white)
+        }
+    }
+    
+    var textView: some View {
         Text(text.uppercased())
-            .foregroundColor(.white)
-            .padding([.horizontal], 15.0)
-            .padding([.vertical], 5.0)
-            .background(.purple)
-            .cornerRadius(10.0)
-            // TODO: add .glass() custom ViewModifier, then change .purple, to clipShape
+    }
+    
+    private struct Constants {
+        static let hPadding: CGFloat = 15.0
+        static let vPadding: CGFloat = 5.0
+        static let radius: CGFloat = 10.0
     }
 }
 

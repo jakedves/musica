@@ -16,6 +16,7 @@
 		50260D52285EC3D500175ACF /* MusicaVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D51285EC3D500175ACF /* MusicaVideo.swift */; };
 		50260D54285EC63C00175ACF /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D53285EC63C00175ACF /* Tag.swift */; };
 		50260D56285EC7C800175ACF /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D55285EC7C800175ACF /* TagList.swift */; };
+		5072CE6B285FFCF8006F3D64 /* Glass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072CE6A285FFCF8006F3D64 /* Glass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		50260D51285EC3D500175ACF /* MusicaVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaVideo.swift; sourceTree = "<group>"; };
 		50260D53285EC63C00175ACF /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		50260D55285EC7C800175ACF /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
+		5072CE6A285FFCF8006F3D64 /* Glass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				50260D3D285EB10700175ACF /* musicaApp.swift */,
 				50260D4B285EB48B00175ACF /* Profile.swift */,
+				5072CE6A285FFCF8006F3D64 /* Glass.swift */,
 				50260D53285EC63C00175ACF /* Tag.swift */,
 				50260D55285EC7C800175ACF /* TagList.swift */,
 				50260D4D285EBEBB00175ACF /* MusicaUser.swift */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5072CE6B285FFCF8006F3D64 /* Glass.swift in Sources */,
 				50260D54285EC63C00175ACF /* Tag.swift in Sources */,
 				50260D56285EC7C800175ACF /* TagList.swift in Sources */,
 				50260D50285EC29F00175ACF /* AppUser.swift in Sources */,
