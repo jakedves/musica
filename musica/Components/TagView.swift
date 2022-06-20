@@ -1,5 +1,5 @@
 //
-//  Tag.swift
+//  TagView.swift
 //  musica
 //
 //  Created by Jake Davies on 19/06/2022.
@@ -7,16 +7,15 @@
 
 import SwiftUI
 
-struct Tag: View {
-    let text: String
-    let color: Color
+struct TagView: View {
+    let tag: Tag
     
     var body: some View {
         ZStack {
             textView
                 .padding([.horizontal], Constants.hPadding)
                 .padding([.vertical], Constants.vPadding)
-                .background(color)
+                .background(tag.color)
                 .cornerRadius(Constants.radius)
                 .glass()
             textView
@@ -25,7 +24,7 @@ struct Tag: View {
     }
     
     var textView: some View {
-        Text(text.uppercased())
+        Text(tag.content.uppercased())
     }
     
     private struct Constants {
@@ -37,6 +36,6 @@ struct Tag: View {
 
 struct Tag_Previews: PreviewProvider {
     static var previews: some View {
-        Tag(text: "Guitarist", color: .blue)
+        TagView(tag: Tag("guitar", .red))
     }
 }

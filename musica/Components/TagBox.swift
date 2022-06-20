@@ -8,14 +8,20 @@
 import SwiftUI
 
 struct TagBox: View {
-    let tag: String
-    let color: Color
+    let tag: Tag
+    let action: () -> ()
+    
+    init(_ tag: Tag, _ action: @escaping () -> () = {}) {
+        self.tag = tag
+        self.action = action
+    }
     
     var body: some View {
-        Text(tag.capitalized)
-            .bold()
+        Button(tag.content.uppercased(), action: self.action)
+            .foregroundColor(tag.color == .black ? .white : .black)
+            .font(.headline)
             .frame(maxWidth: .infinity, minHeight: Constants.boxHeight)
-            .background(color)
+            .background(tag.color)
             .cornerRadius(Constants.radius)
     }
     
@@ -27,6 +33,6 @@ struct TagBox: View {
 
 struct TagBox_Previews: PreviewProvider {
     static var previews: some View {
-        TagBox(tag: "rock", color: .red)
+        TagBox(Tag("rock", .red))
     }
 }

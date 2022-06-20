@@ -12,7 +12,7 @@ struct Explore: View {
         ScrollView {
             LazyVGrid(columns: [GridItem(), GridItem()]) {
                 ForEach (AppData.tags, id: \.self) { tag in
-                    TagBox(tag: tag, color: .blue)
+                    TagBox(tag)
                 }
             }
             .padding()

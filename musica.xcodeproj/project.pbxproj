@@ -14,7 +14,7 @@
 		50260D4E285EBEBB00175ACF /* MusicaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D4D285EBEBB00175ACF /* MusicaUser.swift */; };
 		50260D50285EC29F00175ACF /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D4F285EC29F00175ACF /* AppUser.swift */; };
 		50260D52285EC3D500175ACF /* MusicaVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D51285EC3D500175ACF /* MusicaVideo.swift */; };
-		50260D54285EC63C00175ACF /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D53285EC63C00175ACF /* Tag.swift */; };
+		50260D54285EC63C00175ACF /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D53285EC63C00175ACF /* TagView.swift */; };
 		50260D56285EC7C800175ACF /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D55285EC7C800175ACF /* TagList.swift */; };
 		5072CE6B285FFCF8006F3D64 /* Glass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072CE6A285FFCF8006F3D64 /* Glass.swift */; };
 		5072CE6F2860316A006F3D64 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072CE6E2860316A006F3D64 /* Login.swift */; };
@@ -33,7 +33,7 @@
 		50260D4D285EBEBB00175ACF /* MusicaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaUser.swift; sourceTree = "<group>"; };
 		50260D4F285EC29F00175ACF /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		50260D51285EC3D500175ACF /* MusicaVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaVideo.swift; sourceTree = "<group>"; };
-		50260D53285EC63C00175ACF /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		50260D53285EC63C00175ACF /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		50260D55285EC7C800175ACF /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
 		5072CE6A285FFCF8006F3D64 /* Glass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glass.swift; sourceTree = "<group>"; };
 		5072CE6E2860316A006F3D64 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 			children = (
 				5072CE70286034AB006F3D64 /* MusicaLargeButton.swift */,
 				5072CE6A285FFCF8006F3D64 /* Glass.swift */,
-				50260D53285EC63C00175ACF /* Tag.swift */,
+				50260D53285EC63C00175ACF /* TagView.swift */,
 				50260D55285EC7C800175ACF /* TagList.swift */,
 				5072CE7728604169006F3D64 /* TagBox.swift */,
 			);
@@ -196,7 +196,7 @@
 			files = (
 				5072CE7A28604332006F3D64 /* AppData.swift in Sources */,
 				5072CE6B285FFCF8006F3D64 /* Glass.swift in Sources */,
-				50260D54285EC63C00175ACF /* Tag.swift in Sources */,
+				50260D54285EC63C00175ACF /* TagView.swift in Sources */,
 				50260D56285EC7C800175ACF /* TagList.swift in Sources */,
 				5072CE7628603875006F3D64 /* Explore.swift in Sources */,
 				5072CE7828604169006F3D64 /* TagBox.swift in Sources */,
