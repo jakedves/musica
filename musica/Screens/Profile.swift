@@ -20,7 +20,7 @@ struct Profile: View {
                 bio
                 tags
                 highlights
-                allClipsButton
+                allClipsButton.musicaLargeButton(.white)
                 Spacer()
                 
             }
