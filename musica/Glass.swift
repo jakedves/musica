@@ -22,7 +22,7 @@ struct Glass: ViewModifier {
 }
 
 extension View {
-    func glass(contentOpacity c: Double = 0.8, shadowOpacity s: Double = 0.35,
+    func glass(contentOpacity c: Double = 0.7, shadowOpacity s: Double = 0.35,
                radius r: CGFloat = 10.0, distance d: CGFloat = 3.0) -> some View {
         modifier(Glass(contentOpacity: c, shadowOpacity: s, radius: r, distance: d))
     }
