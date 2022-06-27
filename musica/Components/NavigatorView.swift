@@ -7,33 +7,43 @@
 
 import SwiftUI
 
+// A NavigatorView is a view that should always be used such that it takes up the full screen space,
+// not including the safe area. This is for the GeometryReader to be able to determine the correct size
+// for the frame surrounding the buttons. This size is used to determine the distance they move away from
+// the large button, which begins navigation.
 struct NavigatorView: View {
     @State var selecting = false
     
     var body: some View {
         GeometryReader { geo in
             
-            // get half the screen width
-            let length = geo.size.width / 2.0
+            // get half the screen width, and scale to 95% (buttons too far otherwise)
+            let length = geo.size.width * 0.5 * 0.95
             VStack {
                 Spacer()
                 HStack {
                     Spacer()
                     
-                    // this is where the buttons should be found
+                    // when doing absolute positioning in SwiftUI, we should acknowledge the coordinate space
+                    // is as follows:
+                    //
+                    // -------------> x
+                    // |
+                    // |
+                    // |
+                    // |
+                    // \/
+                    // y
                     ZStack {
-                        let largeCenter = length - Constants.largeRadius / 2
-                        let short = Constants.largeRadius / 2
-                        
-                        // some clever trig + adjustment for feel
-                        let point = (largeCenter - short) / sqrt(2.0) - 9.0
+                        let largeCenter = length - Constants.largeRadius / 2.0
+                        let point = (largeCenter - Constants.shortDistance) / sqrt(2.0) - 9.0
                         
                         button1
-                            .position(x: selecting ? short : largeCenter,
+                            .position(x: selecting ? Constants.shortDistance : largeCenter,
                                       y: largeCenter)
                         button2
                             .position(x: largeCenter,
-                                      y: selecting ? short : largeCenter)
+                                      y: selecting ? Constants.shortDistance : largeCenter)
                         button3
                             .position(x: selecting ? point : largeCenter,
                                       y: selecting ? point : largeCenter)
@@ -84,6 +94,7 @@ struct NavigatorView: View {
     private struct Constants {
         static let largeRadius: CGFloat = 80.0
         static let smallRadius: CGFloat = 54.0
+        static let shortDistance = Constants.largeRadius / 2.0
     }
 }
 

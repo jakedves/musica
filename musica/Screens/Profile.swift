@@ -25,6 +25,8 @@ struct Profile: View {
                 
             }
             .padding()
+            
+            NavigatorView()
         }
     }
     

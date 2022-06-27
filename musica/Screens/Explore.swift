@@ -9,15 +9,18 @@ import SwiftUI
 
 struct Explore: View {
     var body: some View {
-        ScrollView {
-            LazyVGrid(columns: [GridItem(), GridItem()]) {
-                ForEach (AppData.tags, id: \.self) { tag in
-                    TagBox(tag)
+        ZStack {
+            ScrollView {
+                LazyVGrid(columns: [GridItem(), GridItem()]) {
+                    ForEach (AppData.tags, id: \.self) { tag in
+                        TagBox(tag)
+                    }
                 }
+                .padding()
             }
-            .padding()
+            
+            NavigatorView()
         }
-        
     }
 }
 
