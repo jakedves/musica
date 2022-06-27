@@ -22,6 +22,7 @@
 		5072CE7628603875006F3D64 /* Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072CE7528603875006F3D64 /* Explore.swift */; };
 		5072CE7828604169006F3D64 /* TagBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072CE7728604169006F3D64 /* TagBox.swift */; };
 		5072CE7A28604332006F3D64 /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072CE7928604332006F3D64 /* AppData.swift */; };
+		5072CE7C2860EA54006F3D64 /* NavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072CE7B2860EA54006F3D64 /* NavigatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		5072CE7528603875006F3D64 /* Explore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explore.swift; sourceTree = "<group>"; };
 		5072CE7728604169006F3D64 /* TagBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagBox.swift; sourceTree = "<group>"; };
 		5072CE7928604332006F3D64 /* AppData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
+		5072CE7B2860EA54006F3D64 /* NavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				50260D53285EC63C00175ACF /* TagView.swift */,
 				50260D55285EC7C800175ACF /* TagList.swift */,
 				5072CE7728604169006F3D64 /* TagBox.swift */,
+				5072CE7B2860EA54006F3D64 /* NavigatorView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				50260D4E285EBEBB00175ACF /* MusicaUser.swift in Sources */,
 				50260D52285EC3D500175ACF /* MusicaVideo.swift in Sources */,
 				5072CE6F2860316A006F3D64 /* Login.swift in Sources */,
+				5072CE7C2860EA54006F3D64 /* NavigatorView.swift in Sources */,
 				50260D4C285EB48B00175ACF /* Profile.swift in Sources */,
 				50260D3E285EB10700175ACF /* musicaApp.swift in Sources */,
 				5072CE71286034AB006F3D64 /* MusicaLargeButton.swift in Sources */,
