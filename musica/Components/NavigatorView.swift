@@ -13,6 +13,15 @@ import SwiftUI
 // the large button, which begins navigation.
 struct NavigatorView: View {
     @State var selecting = false
+    let function1: () -> ()
+    let function2: () -> ()
+    let function3: () -> ()
+    
+    init(f1: @escaping () -> () = {}, f2: @escaping () -> () = {}, f3: @escaping () -> () = {}) {
+        self.function1 = f1
+        self.function2 = f2
+        self.function3 = f3
+    }
     
     var body: some View {
         GeometryReader { geo in
@@ -73,21 +82,34 @@ struct NavigatorView: View {
     }
     
     private var button1: some View {
-        Circle()
-            .foregroundColor(.green)
-            .frame(width: Constants.smallRadius, height: Constants.smallRadius)
+        Button {
+            function1()
+        } label: {
+            Circle()
+                .foregroundColor(.green)
+                .frame(width: Constants.smallRadius, height: Constants.smallRadius)
+        }
+        
     }
 
     private var button2: some View {
-        Circle()
-            .foregroundColor(.blue)
-            .frame(width: Constants.smallRadius, height: Constants.smallRadius)
+        Button {
+            function2()
+        } label: {
+            Circle()
+                .foregroundColor(.blue)
+                .frame(width: Constants.smallRadius, height: Constants.smallRadius)
+        }
     }
     
     private var button3: some View {
-        Circle()
-            .foregroundColor(.orange)
-            .frame(width: Constants.smallRadius, height: Constants.smallRadius)
+        Button {
+            function3()
+        } label: {
+            Circle()
+                .foregroundColor(.orange)
+                .frame(width: Constants.smallRadius, height: Constants.smallRadius)
+        }
     }
     
     
