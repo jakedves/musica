@@ -47,13 +47,13 @@ struct NavigatorView: View {
                         let largeCenter = length - Constants.largeRadius / 2.0
                         let point = (largeCenter - Constants.shortDistance) / sqrt(2.0) - 9.0
                         
-                        button1
+                        NavigationSmallButton(color: .green, function: function1, binding: $selecting)
                             .position(x: selecting ? Constants.shortDistance : largeCenter,
                                       y: largeCenter)
-                        button2
+                        NavigationSmallButton(color: .blue, function: function2, binding: $selecting)
                             .position(x: largeCenter,
                                       y: selecting ? Constants.shortDistance : largeCenter)
-                        button3
+                        NavigationSmallButton(color: .orange, function: function3, binding: $selecting)
                             .position(x: selecting ? point : largeCenter,
                                       y: selecting ? point : largeCenter)
                         
@@ -62,7 +62,7 @@ struct NavigatorView: View {
                             .position(x: largeCenter,
                                       y: largeCenter)
                             .onTapGesture {
-                                withAnimation(.spring()) {
+                                withAnimation(.interactiveSpring()) {
                                     selecting.toggle()
                                 }
                             }
@@ -81,37 +81,24 @@ struct NavigatorView: View {
             .frame(width: Constants.largeRadius, height: Constants.largeRadius)
     }
     
-    private var button1: some View {
-        Button {
-            function1()
-        } label: {
-            Circle()
-                .foregroundColor(.green)
-                .frame(width: Constants.smallRadius, height: Constants.smallRadius)
-        }
+    private struct NavigationSmallButton: View {
+        let color: Color
+        let function: () -> ()
+        let binding: Binding<Bool>
         
-    }
-
-    private var button2: some View {
-        Button {
-            function2()
-        } label: {
-            Circle()
-                .foregroundColor(.blue)
-                .frame(width: Constants.smallRadius, height: Constants.smallRadius)
+        var body: some View {
+            Button {
+                function()
+                withAnimation(.interactiveSpring()) {
+                    binding.wrappedValue.toggle()
+                }
+            } label: {
+                Circle()
+                    .foregroundColor(color)
+                    .frame(width: Constants.smallRadius, height: Constants.smallRadius)
+            }
         }
     }
-    
-    private var button3: some View {
-        Button {
-            function3()
-        } label: {
-            Circle()
-                .foregroundColor(.orange)
-                .frame(width: Constants.smallRadius, height: Constants.smallRadius)
-        }
-    }
-    
     
     private struct Constants {
         static let largeRadius: CGFloat = 80.0
