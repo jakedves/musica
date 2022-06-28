@@ -84,13 +84,13 @@ struct NavigatorView: View {
     private struct NavigationSmallButton: View {
         let color: Color
         let function: () -> ()
-        let binding: Binding<Bool>
+        @Binding var binding: Bool
         
         var body: some View {
             Button {
                 function()
                 withAnimation(.interactiveSpring()) {
-                    binding.wrappedValue.toggle()
+                    binding.toggle()
                 }
             } label: {
                 Circle()
