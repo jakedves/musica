@@ -11,25 +11,25 @@ struct Highlight: View {
     var body: some View {
         ZStack(alignment: .bottomLeading) {
             // Image(): Thumbnail for the video, for now Color.red at 16:9 ratio
-            Color.red
+            Constants.dummyThumbnail
             overlay
-                .padding([.vertical], 5.0)
-                .padding([.horizontal], 8.0)
+                .padding([.vertical], Constants.vpad)
+                .padding([.horizontal], Constants.hpad)
         }
-        .aspectRatio(9.0 / 16.0, contentMode: .fit)
-        .cornerRadius(15.0)
+        .aspectRatio(Constants.aspectRatio, contentMode: .fit)
+        .cornerRadius(Constants.highlightCorner)
     }
     
     var likeCount: some View {
-        HStack(alignment: .bottom, spacing: 5.0) {
-            Image(systemName: "star.fill")
+        HStack(alignment: .bottom, spacing: Constants.statSpacing) {
+            Image(systemName: Constants.statIcon)
                 .foregroundColor(.yellow)
-            Text(String(Dummy.likes))
+            Text(String(Constants.dummyLikes))
         }
     }
     
     var songName: some View {
-        Text(Dummy.song)
+        Text(Constants.dummySong)
     }
     
     var overlay: some View {
@@ -38,12 +38,28 @@ struct Highlight: View {
             songName
         }
         .font(.bold(.caption)())
-        .lineLimit(1)
+        .lineLimit(Constants.lineLimit)
     }
     
-    private struct Dummy {
-        static let likes = 45
-        static let song = "Sweet Child o' Mine"
+    private struct Constants {
+        // TODO: Remove
+        static let dummyLikes = 45
+        static let dummySong = "Sweet Child o' Mine"
+        static let dummyThumbnail = Color.red
+        
+        // For positioning
+        static let hpad: CGFloat = 8.0
+        static let vpad: CGFloat = 5.0
+        
+        // For overlay properties
+        static let lineLimit = 1
+        static let statIcon = "star.fill"
+        static let statSpacing: CGFloat = 5.0
+        
+        // For overall view
+        static let aspectRatio = 9.0 / 16.0
+        static let highlightCorner: CGFloat = 15.0
+        
     }
 }
 

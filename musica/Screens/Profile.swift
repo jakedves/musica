@@ -41,9 +41,8 @@ struct Profile: View {
         Text("This is my bio.").frame(width: Constants.bioWidth)
     }
     
-    // TODO: Replace with a TagList view
     private var tags: some View {
-        Rectangle().frame(width: 200.0, height: 50.0)
+        TagList()
     }
     
     // TODO: Replace with a ProfileHighlights view

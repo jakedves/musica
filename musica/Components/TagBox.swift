@@ -19,7 +19,6 @@ struct TagBox: View {
     var body: some View {
         Button(tag.content.uppercased(), action: self.action)
             .foregroundColor(tag.color == .black ? .white : .black)
-            .font(.headline)
             .frame(maxWidth: .infinity, minHeight: Constants.boxHeight)
             .background(tag.color)
             .cornerRadius(Constants.radius)
