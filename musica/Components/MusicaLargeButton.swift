@@ -17,7 +17,7 @@ struct MusicaLargeButton: ViewModifier {
             .frame(maxWidth: .infinity)
             .background(color)
             //.border(.black, width: 1.0)
-            .cornerRadius(10.0)
+            .cornerRadius(15.0)
     }
 }
 
