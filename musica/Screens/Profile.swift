@@ -18,8 +18,8 @@ struct Profile: View {
                 bio
                 tags
                 highlights
-                allClipsButton.musicaLargeButton(.blue)
-                songBookButton.musicaLargeButton(.blue)
+                allClipsButton
+                songBookButton
                 Spacer()
                 
             }
@@ -46,18 +46,28 @@ struct Profile: View {
     // TODO: Replace with a ProfileHighlights view
     private var highlights: some View {
         HStack {
-            Highlight()
-            Highlight()
-            Highlight()
+            Button {
+            } label: {
+                Highlight()
+            }
+            Button {
+            } label: {
+                Highlight()
+            }
+            Button {
+            } label: {
+                Highlight()
+            }
         }
+        .foregroundColor(.white)
     }
     
     private var allClipsButton: some View {
-        Button("All clips") { }
+        Button("All clips") { }.musicaLargeButton(.blue)
     }
     
     private var songBookButton: some View {
-        Button("Musician's Songbook") { }
+        Button("Musician's Songbook") { }.musicaLargeButton(.blue)
     }
     
     private struct Constants {
