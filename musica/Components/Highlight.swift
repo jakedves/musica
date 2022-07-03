@@ -9,43 +9,41 @@ import SwiftUI
 
 struct Highlight: View {
     var body: some View {
-        ZStack {
-            // Image(): Thumbnail for the video
+        ZStack(alignment: .bottomLeading) {
+            // Image(): Thumbnail for the video, for now Color.red at 16:9 ratio
             Color.red
-            
-            contentDetail
+            overlay
+                .padding([.vertical], 5.0)
+                .padding([.horizontal], 8.0)
         }
         .aspectRatio(9.0 / 16.0, contentMode: .fit)
         .cornerRadius(15.0)
     }
     
-    // we can ignore the type of highlight (song vs routine vs N/A) by using nullable images,
-    // text and have the view be empty when .none
-    var contentDetail: some View {
-        GeometryReader { geo in
-            VStack {
-                Spacer()
-                HStack {
-                    Spacer()
-                    HStack {
-                        Image(systemName: "hammer")
-                        VStack(alignment: .leading) {
-                            Text("Title or routine name")
-                                .bold()
-                            Text("Artists or routine creator")
-                        }
-                        Spacer()
-                    }
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(.black)
-                    .cornerRadius(15.0)
-                    .frame(width: geo.size.width * 0.95)
-                    Spacer()
-                }
-            }
+    var likeCount: some View {
+        HStack(alignment: .bottom, spacing: 5.0) {
+            Image(systemName: "star.fill")
+                .foregroundColor(.yellow)
+            Text(String(Dummy.likes))
         }
-        .padding([.bottom])
+    }
+    
+    var songName: some View {
+        Text(Dummy.song)
+    }
+    
+    var overlay: some View {
+        VStack(alignment: .leading) {
+            likeCount
+            songName
+        }
+        .font(.bold(.caption)())
+        .lineLimit(1)
+    }
+    
+    private struct Dummy {
+        static let likes = 45
+        static let song = "Sweet Child o' Mine"
     }
 }
 
