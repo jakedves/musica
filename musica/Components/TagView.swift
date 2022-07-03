@@ -17,7 +17,7 @@ struct TagView: View {
                 .padding([.vertical], Constants.vPadding)
                 .background(tag.color)
                 .cornerRadius(Constants.radius)
-                .glass()
+                .glass(shadowOpacity: 0.15)
             textView
                 .foregroundColor(.white)
         }
