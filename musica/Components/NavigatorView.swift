@@ -47,13 +47,16 @@ struct NavigatorView: View {
                         let largeCenter = length - Constants.largeRadius / 2.0
                         let point = (largeCenter - Constants.shortDistance) / sqrt(2.0) - 9.0
                         
-                        NavigationSmallButton(color: .green, function: function1, binding: $selecting)
+                        NavigationSmallButton(color: .green, function: function1,
+                                              icon: Constants.leftIcon, binding: $selecting)
                             .position(x: selecting ? Constants.shortDistance : largeCenter,
                                       y: largeCenter)
-                        NavigationSmallButton(color: .blue, function: function2, binding: $selecting)
+                        NavigationSmallButton(color: .blue, function: function2,
+                                              icon: Constants.topIcon, binding: $selecting)
                             .position(x: largeCenter,
                                       y: selecting ? Constants.shortDistance : largeCenter)
-                        NavigationSmallButton(color: .orange, function: function3, binding: $selecting)
+                        NavigationSmallButton(color: .orange, function: function3,
+                                              icon: Constants.midIcon, binding: $selecting)
                             .position(x: selecting ? point : largeCenter,
                                       y: selecting ? point : largeCenter)
                         
@@ -76,14 +79,21 @@ struct NavigatorView: View {
     }
     
     private var mainButton: some View {
-        Circle()
-            .foregroundColor(.red)
-            .frame(width: Constants.largeRadius, height: Constants.largeRadius)
+        ZStack {
+            Circle()
+                .foregroundColor(.red)
+            Image(systemName: Constants.mainIcon)
+                .font(.system(size: Constants.largeRadius * 0.5))
+                .offset(x: 0.0, y: 2.0)
+                .foregroundColor(.white)
+        }
+        .frame(width: Constants.largeRadius, height: Constants.largeRadius)
     }
     
     private struct NavigationSmallButton: View {
         let color: Color
         let function: () -> ()
+        let icon: String
         @Binding var binding: Bool
         
         var body: some View {
@@ -93,9 +103,15 @@ struct NavigatorView: View {
                     binding.toggle()
                 }
             } label: {
-                Circle()
-                    .foregroundColor(color)
-                    .frame(width: Constants.smallRadius, height: Constants.smallRadius)
+                ZStack {
+                    Circle()
+                        .foregroundColor(color)
+                    Image(systemName: icon)
+                        .font(.system(size: Constants.smallRadius * 0.5))
+                        .foregroundColor(.white)
+                    
+                }
+                .frame(width: Constants.smallRadius, height: Constants.smallRadius)
             }
         }
     }
@@ -104,6 +120,11 @@ struct NavigatorView: View {
         static let largeRadius: CGFloat = 80.0
         static let smallRadius: CGFloat = 54.0
         static let shortDistance = Constants.largeRadius / 2.0
+        
+        static let mainIcon = "location.fill"
+        static let topIcon = "person.fill"
+        static let midIcon = "music.note"
+        static let leftIcon = "magnifyingglass"
     }
 }
 

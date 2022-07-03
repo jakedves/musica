@@ -26,6 +26,7 @@
 		508190F7286BAC10004B3F45 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508190F6286BAC10004B3F45 /* MainView.swift */; };
 		508816D8286FB9720045196A /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508816D7286FB9720045196A /* Highlight.swift */; };
 		50A698772871BE1B00222085 /* Routines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698762871BE1B00222085 /* Routines.swift */; };
+		50A698792871E31C00222085 /* MusicaBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698782871E31C00222085 /* MusicaBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		508190F6286BAC10004B3F45 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		508816D7286FB9720045196A /* Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlight.swift; sourceTree = "<group>"; };
 		50A698762871BE1B00222085 /* Routines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routines.swift; sourceTree = "<group>"; };
+		50A698782871E31C00222085 /* MusicaBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				5072CE7728604169006F3D64 /* TagBox.swift */,
 				5072CE7B2860EA54006F3D64 /* NavigatorView.swift */,
 				508816D7286FB9720045196A /* Highlight.swift */,
+				50A698782871E31C00222085 /* MusicaBackground.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				5072CE7C2860EA54006F3D64 /* NavigatorView.swift in Sources */,
 				50260D4C285EB48B00175ACF /* Profile.swift in Sources */,
 				50260D3E285EB10700175ACF /* musicaApp.swift in Sources */,
+				50A698792871E31C00222085 /* MusicaBackground.swift in Sources */,
 				508190F7286BAC10004B3F45 /* MainView.swift in Sources */,
 				5072CE71286034AB006F3D64 /* MusicaLargeButton.swift in Sources */,
 			);
