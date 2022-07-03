@@ -12,7 +12,8 @@ struct MainView: View {
     
     var body: some View {
         ZStack {
-            // BackgroundView()
+            Color.blue.opacity(0.3).ignoresSafeArea()
+
             // => Other screen views can have a transparent background
             switch screen {
             case .profile:
