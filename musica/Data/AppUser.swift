@@ -11,5 +11,5 @@ import Foundation
 // behave the same as a regular user, except the profile image and highlights
 // videos aren't loaded lazily.
 struct AppUser: Equatable {
-    var user: MusicaUser
+    static var user: MusicaUser?
 }
