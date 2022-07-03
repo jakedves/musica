@@ -26,3 +26,6 @@ struct Tag: Hashable {
         self.color = color
     }
 }
+
+// TODO: Remove once not needed
+let testImageAsData = UIImage(named: "Test")?.jpegData(compressionQuality: 1.0)

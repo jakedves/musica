@@ -8,10 +8,7 @@
 import SwiftUI
 
 struct Profile: View {
-    let verified = true
-    let name = "Jake"
-    let tags = [Tag("rock", .red), Tag("pop", .purple), Tag("jazz", .orange),
-                Tag("guitar", .red), Tag("metal", .black)]
+    @StateObject var user = ProfileViewModel(id: UUID())
     
     var body: some View {
         ZStack {
@@ -21,7 +18,7 @@ struct Profile: View {
                            height: Constants.photoRadius)
                 HStack(spacing: 2.0) {
                     nameView
-                    Image(systemName: verified ? Constants.verifiedIcon : "")
+                    Image(systemName: user.verified ? Constants.verifiedIcon : "")
                         .foregroundColor(.yellow)
                 }
                 .font(.title3)
@@ -38,23 +35,23 @@ struct Profile: View {
     }
     
     private var nameView: some View {
-        Text(name).bold()
+        Text(user.name).bold()
     }
     
     private var profilePicture: some View {
-        Image("Test")
+        // TODO: Fix force unwrapping
+        Image(uiImage: UIImage(data: user.image!)!)
             .resizable()
             .aspectRatio(contentMode: .fill)
             .clipShape(Circle())
-        //Circle().fill(Color.blue)
     }
     
     private var bio: some View {
-        Text("This is my bio.").frame(width: Constants.bioWidth)
+        Text(user.bio).frame(width: Constants.bioWidth)
     }
     
     private var tagList: some View {
-        TagList(tags)
+        TagList(user.tags)
     }
     
     // TODO: Replace with a ProfileHighlights view
@@ -82,7 +79,7 @@ struct Profile: View {
     }
     
     private var songBookButton: some View {
-        Button {} label: { Text("\(name)'s Songbook").musicaLargeButton(.blue) }
+        Button {} label: { Text("\(user.name)'s Songbook").musicaLargeButton(.blue) }
     }
     
     private struct Constants {
