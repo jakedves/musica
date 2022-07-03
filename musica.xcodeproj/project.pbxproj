@@ -27,6 +27,7 @@
 		508816D8286FB9720045196A /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508816D7286FB9720045196A /* Highlight.swift */; };
 		50A698772871BE1B00222085 /* Routines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698762871BE1B00222085 /* Routines.swift */; };
 		50A698792871E31C00222085 /* MusicaBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698782871E31C00222085 /* MusicaBackground.swift */; };
+		50A6987B2872042900222085 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A6987A2872042900222085 /* SignIn.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		508816D7286FB9720045196A /* Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlight.swift; sourceTree = "<group>"; };
 		50A698762871BE1B00222085 /* Routines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routines.swift; sourceTree = "<group>"; };
 		50A698782871E31C00222085 /* MusicaBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaBackground.swift; sourceTree = "<group>"; };
+		50A6987A2872042900222085 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				5072CE7528603875006F3D64 /* Explore.swift */,
 				508190F6286BAC10004B3F45 /* MainView.swift */,
 				50A698762871BE1B00222085 /* Routines.swift */,
+				50A6987A2872042900222085 /* SignIn.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				5072CE7828604169006F3D64 /* TagBox.swift in Sources */,
 				50260D50285EC29F00175ACF /* AppUser.swift in Sources */,
 				50260D4E285EBEBB00175ACF /* MusicaUser.swift in Sources */,
+				50A6987B2872042900222085 /* SignIn.swift in Sources */,
 				50260D52285EC3D500175ACF /* MusicaVideo.swift in Sources */,
 				5072CE6F2860316A006F3D64 /* Login.swift in Sources */,
 				5072CE7C2860EA54006F3D64 /* NavigatorView.swift in Sources */,

@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct TagList: View {
-    let tags: [Tag] = [Tag("rock", .red), Tag("pop", .purple), Tag("jazz", .orange),
-                       Tag("guitar", .red), Tag("metal", .black)]
+    let tags: [Tag]
+    
+    init(_ tags: [Tag]) {
+        self.tags = tags
+    }
     
     var body: some View {
         LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
@@ -23,6 +26,7 @@ struct TagList: View {
 
 struct TagList_Previews: PreviewProvider {
     static var previews: some View {
-        TagList()
+        TagList([Tag("rock", .red), Tag("pop", .purple), Tag("jazz", .orange),
+                 Tag("guitar", .red), Tag("metal", .black)])
     }
 }
