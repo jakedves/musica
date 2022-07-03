@@ -10,8 +10,6 @@ import SwiftUI
 struct Profile: View {
     var body: some View {
         ZStack {
-            // Color.purple.ignoresSafeArea() // TODO: Create BGPatttern Protocol, replace with patterns
-            
             VStack {
                 profilePicture
                     .frame(width: Constants.photoRadius,
@@ -59,7 +57,7 @@ struct Profile: View {
     }
     
     private var songBookButton: some View {
-        Button("User's Songbook") { }
+        Button("Musician's Songbook") { }
     }
     
     private struct Constants {
