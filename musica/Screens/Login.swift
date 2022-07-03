@@ -10,15 +10,18 @@ import SwiftUI
 struct Login: View {
     var body: some View {
         ZStack {
-            //Color.purple.ignoresSafeArea()
             VStack {
-                // big logo
-                // caption
-                // Spacer()
+                Spacer()
+                Text("Musica")
+                    .font(.system(size: 80.0).bold())
+                Text("Music by everyone")
+                    .offset(x: 0.0, y: -8.0)
+                Spacer()
                 // TODO: add SFSymbols phone icon into "sign in with phone number"
                 Button("Sign in with Phone Number", action: {}).musicaLargeButton(.blue)
                 // TODO: replace with actual Apple button
                 Button("Sign in with Apple", action: {}).musicaLargeButton(.black)
+                Spacer()
             }
             .padding()
         }
