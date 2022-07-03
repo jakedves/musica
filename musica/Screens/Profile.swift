@@ -45,7 +45,8 @@ struct Profile: View {
     
     // TODO: Replace with a ProfileHighlights view
     private var highlights: some View {
-        HStack {
+        LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
+            // ForEach (user.highlights) { highlight in HighlightView(highlight) } 
             Button {
             } label: {
                 Highlight()

@@ -33,12 +33,17 @@ struct Highlight: View {
     }
     
     var overlay: some View {
-        VStack(alignment: .leading) {
-            likeCount
-            songName
+        GeometryReader { geo in
+            VStack(alignment: .leading) {
+                Image(systemName: "pin.fill")
+                    .rotationEffect(.degrees(45.0))
+                    .position(x: geo.size.width * 0.9, y: geo.size.height * 0.05)
+                likeCount
+                songName
+            }
+            .font(.bold(.caption)())
+            .lineLimit(Constants.lineLimit)
         }
-        .font(.bold(.caption)())
-        .lineLimit(Constants.lineLimit)
     }
     
     private struct Constants {
