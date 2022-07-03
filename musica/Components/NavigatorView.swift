@@ -82,9 +82,9 @@ struct NavigatorView: View {
         ZStack {
             Circle()
                 .foregroundColor(.red)
-            Image(systemName: Constants.mainIcon)
+            Image(systemName: selecting ? Constants.closeNavIcon : Constants.mainIcon)
                 .font(.system(size: Constants.largeRadius * 0.5))
-                .offset(x: 0.0, y: 2.0)
+                .offset(x: 0.0, y: selecting ? 0.0 : 2.0)
                 .foregroundColor(.white)
         }
         .frame(width: Constants.largeRadius, height: Constants.largeRadius)
@@ -121,6 +121,7 @@ struct NavigatorView: View {
         static let smallRadius: CGFloat = 54.0
         static let shortDistance = Constants.largeRadius / 2.0
         
+        static let closeNavIcon = "xmark"
         static let mainIcon = "location.fill"
         static let topIcon = "person.fill"
         static let midIcon = "music.note"
