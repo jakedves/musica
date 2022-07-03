@@ -18,8 +18,6 @@ struct Explore: View {
                 }
                 .padding()
             }
-            
-            NavigatorView()
         }
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct Profile: View {
     var body: some View {
         ZStack {
-            Color.purple.ignoresSafeArea() // TODO: Create BGPatttern Protocol, replace with patterns
+            // Color.purple.ignoresSafeArea() // TODO: Create BGPatttern Protocol, replace with patterns
             
             VStack {
                 profilePicture
@@ -20,13 +20,12 @@ struct Profile: View {
                 bio
                 tags
                 highlights
-                allClipsButton.musicaLargeButton(.white)
+                allClipsButton.musicaLargeButton(.blue)
+                songBookButton.musicaLargeButton(.blue)
                 Spacer()
                 
             }
             .padding()
-            
-            NavigatorView()
         }
     }
     
@@ -35,7 +34,7 @@ struct Profile: View {
     }
     
     private var profilePicture: some View {
-        Circle().fill(Color.white)
+        Circle().fill(Color.blue)
     }
     
     private var bio: some View {
@@ -50,16 +49,18 @@ struct Profile: View {
     // TODO: Replace with a ProfileHighlights view
     private var highlights: some View {
         HStack {
-            Rectangle().aspectRatio(9 / 16, contentMode: .fit)
-            Rectangle().aspectRatio(9 / 16, contentMode: .fit)
-            Rectangle().aspectRatio(9 / 16, contentMode: .fit)
+            Highlight()
+            Highlight()
+            Highlight()
         }
     }
     
     private var allClipsButton: some View {
         Button("All clips") { }
-            .frame(width: 100.0)
-            .background(Color.white)
+    }
+    
+    private var songBookButton: some View {
+        Button("User's Songbook") { }
     }
     
     private struct Constants {

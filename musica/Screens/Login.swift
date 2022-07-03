@@ -10,7 +10,7 @@ import SwiftUI
 struct Login: View {
     var body: some View {
         ZStack {
-            Color.purple.ignoresSafeArea()
+            //Color.purple.ignoresSafeArea()
             VStack {
                 // big logo
                 // caption
