@@ -17,11 +17,14 @@ struct TagBox: View {
     }
     
     var body: some View {
-        Button(tag.content.uppercased(), action: self.action)
-            .foregroundColor(tag.color == .black ? .white : .black)
-            .frame(maxWidth: .infinity, minHeight: Constants.boxHeight)
-            .background(tag.color)
-            .cornerRadius(Constants.radius)
+        Button(action: self.action) {
+            Text(tag.content.uppercased())
+                .bold()
+                .foregroundColor(tag.color == .black ? .white : .black)
+                .frame(maxWidth: .infinity, minHeight: Constants.boxHeight)
+                .background(tag.color)
+                .cornerRadius(Constants.radius)
+        }
     }
     
     private struct Constants {
