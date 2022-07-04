@@ -34,7 +34,7 @@ struct SignIn: View {
             MainView()
                 // to get here, must be logged in regardless
                 .navigationBarHidden(true)
-                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
         }
     }
     
