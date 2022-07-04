@@ -26,6 +26,7 @@
 		508190F7286BAC10004B3F45 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508190F6286BAC10004B3F45 /* MainView.swift */; };
 		508816D8286FB9720045196A /* Highlight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508816D7286FB9720045196A /* Highlight.swift */; };
 		508954C3287377A100F72B5C /* SearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508954C2287377A100F72B5C /* SearchEngine.swift */; };
+		508954C528738E4800F72B5C /* MusicaRetrievable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508954C428738E4800F72B5C /* MusicaRetrievable.swift */; };
 		50A698772871BE1B00222085 /* Routines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698762871BE1B00222085 /* Routines.swift */; };
 		50A698792871E31C00222085 /* MusicaBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698782871E31C00222085 /* MusicaBackground.swift */; };
 		50A6987B2872042900222085 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A6987A2872042900222085 /* SignIn.swift */; };
@@ -56,6 +57,7 @@
 		508190F6286BAC10004B3F45 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		508816D7286FB9720045196A /* Highlight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Highlight.swift; sourceTree = "<group>"; };
 		508954C2287377A100F72B5C /* SearchEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngine.swift; sourceTree = "<group>"; };
+		508954C428738E4800F72B5C /* MusicaRetrievable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaRetrievable.swift; sourceTree = "<group>"; };
 		50A698762871BE1B00222085 /* Routines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routines.swift; sourceTree = "<group>"; };
 		50A698782871E31C00222085 /* MusicaBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaBackground.swift; sourceTree = "<group>"; };
 		50A6987A2872042900222085 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				50260D51285EC3D500175ACF /* MusicaVideo.swift */,
 				50260D4F285EC29F00175ACF /* AppUser.swift */,
 				5072CE7928604332006F3D64 /* AppData.swift */,
+				508954C428738E4800F72B5C /* MusicaRetrievable.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				5072CE7A28604332006F3D64 /* AppData.swift in Sources */,
 				5072CE6B285FFCF8006F3D64 /* Glass.swift in Sources */,
 				50A6988428723B1600222085 /* CodeVerificationView.swift in Sources */,
+				508954C528738E4800F72B5C /* MusicaRetrievable.swift in Sources */,
 				508816D8286FB9720045196A /* Highlight.swift in Sources */,
 				50260D54285EC63C00175ACF /* TagView.swift in Sources */,
 				50260D56285EC7C800175ACF /* TagList.swift in Sources */,

@@ -45,4 +45,15 @@ class SearchEngine: ObservableObject {
     private func setAchievements() {
         self.achievements = [("app creator", .blue)]
     }
+    
+    // random order
+    public func retrieve<MusicaRetrievable>() -> [MusicaRetrievable] {
+        // TODO: Implement this
+        []
+    }
+    
+    public func retrieve<MusicaBulkRetrievable>(query: String) -> [MusicaBulkRetrievable] {
+        // TODO: Implement this
+        []
+    }
 }
