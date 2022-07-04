@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
+    @StateObject private var engine = SearchEngine()
     @State private var screen: MusicaScreen = .profile
     
     var body: some View {
@@ -19,20 +20,24 @@ struct MainView: View {
                 Profile()
             case .explore:
                 Explore()
+            case .routines:
+                Explore()
             case .login:
                 Explore()
-                //Login(ma)
+                // Login()
             }
             NavigatorView(f1: { setScreen(to: .explore) },
                           f2: { setScreen(to: .profile) },
-                          f3: { setScreen(to: .login) })
+                          f3: { setScreen(to: .routines) })
         }
+        .environmentObject(engine)
     }
     
     private enum MusicaScreen {
         case login
         case profile
         case explore
+        case routines
     }
     
     private func setScreen(to screen: MusicaScreen) {
