@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct TagView: View {
-    let tag: Tag
+    let tag: (String, Color)
     
     var body: some View {
         ZStack {
             textView
                 .padding([.horizontal], Constants.hPadding)
                 .padding([.vertical], Constants.vPadding)
-                .background(tag.color)
+                .background(tag.1)
                 .cornerRadius(Constants.radius)
                 .glass(shadowOpacity: 0.15)
             textView
@@ -24,7 +24,7 @@ struct TagView: View {
     }
     
     var textView: some View {
-        Text(tag.content.uppercased())
+        Text(tag.0.uppercased())
     }
     
     private struct Constants {
@@ -36,6 +36,6 @@ struct TagView: View {
 
 struct Tag_Previews: PreviewProvider {
     static var previews: some View {
-        TagView(tag: Tag("guitar", .red))
+        TagView(tag: ("guitar", .red))
     }
 }

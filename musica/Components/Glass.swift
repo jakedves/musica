@@ -33,7 +33,7 @@ struct Glass_Previews: PreviewProvider {
         ZStack {
             Image("Test")
                 .opacity(0.5)
-            TagView(tag: Tag("guitarist", .red))
+            TagView(tag: ("guitarist", .red))
         }
     }
 }

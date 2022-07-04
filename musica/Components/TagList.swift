@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct TagList: View {
-    let tags: [Tag]
+    let tags: [(String, Color)]
     
-    init(_ tags: [Tag]) {
+    init(_ tags: [(String, Color)]) {
         self.tags = tags
     }
     
     var body: some View {
         LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-            ForEach(tags, id: \.self) { tag in
-                TagView(tag: tag)
+            ForEach(0..<tags.count, id: \.self) { index in
+                TagView(tag: tags[index])
                     .font(.caption)
             }
         }
@@ -26,7 +26,7 @@ struct TagList: View {
 
 struct TagList_Previews: PreviewProvider {
     static var previews: some View {
-        TagList([Tag("rock", .red), Tag("pop", .purple), Tag("jazz", .orange),
-                 Tag("guitar", .red), Tag("metal", .black)])
+        TagList([("rock", .red), ("pop", .purple), ("jazz", .orange),
+                 ("guitar", .red), ("metal", .black)])
     }
 }

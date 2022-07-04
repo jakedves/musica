@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit
+import SwiftUI
 
 class ProfileViewModel: ObservableObject {
     private var userID: UUID
@@ -14,7 +14,7 @@ class ProfileViewModel: ObservableObject {
     @Published var bio = ""
     @Published var image: Data?
     @Published var verified = false
-    @Published var tags: [Tag]
+    @Published var tags: [(String, Color)]
     @Published var highlightPointers = [UUID(), UUID(), UUID()]
     @Published var highlightThumbnails = [Data?]()
     
@@ -24,7 +24,7 @@ class ProfileViewModel: ObservableObject {
         bio = "This is my bio."
         image = testImageAsData
         verified = true
-        tags = [Tag("rock", .red), Tag("pop", .purple), Tag("jazz", .orange), Tag("guitar", .red), Tag("metal", .black)]
+        tags = [("rock", .red), ("pop", .purple), ("jazz", .orange), ("guitar", .red), ("metal", .black)]
         highlightThumbnails = [testImageAsData, testImageAsData, testImageAsData]
     }
     

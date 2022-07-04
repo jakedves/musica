@@ -18,11 +18,11 @@ struct Explore: View {
                         .font(.bold(Font.title2)())
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
                         let tags = engine.getAllTags()
-                        ForEach (0..<tags.count, id: \.self) { tag in
+                        ForEach (0..<tags.count, id: \.self) { index in
                             Button {
                                 // navigate to a ExplorePage(Explorer(content: tag.0))
                             } label: {
-                                TagBox(tags[tag])
+                                TagBox(tags[index])
                             }
                         }
                     }
