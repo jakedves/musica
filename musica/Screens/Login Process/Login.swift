@@ -30,6 +30,7 @@ struct Login: View {
                             .navigationBarHidden(manager.loggedIn)
                             .navigationBarBackButtonHidden(manager.loggedIn)
                     }.musicaLargeButton(.blue)
+                    
                     // TODO: replace with actual Apple button and add functionality
                     Button("Sign in with Apple", action: {
                         // manager.appleSignIn()
