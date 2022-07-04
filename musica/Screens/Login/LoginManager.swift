@@ -16,8 +16,29 @@ class LoginManager: ObservableObject {
     @Published var method: SignInMethod?
     @Published var loggedIn = false
     @Published var loginFailed = false
-    @Published var phoneNumber = ""
-    @Published var code = 0
+    @Published var phoneNumber = "" {
+        didSet {
+            let digits = phoneNumber.filter { $0.isNumber }
+            if phoneNumber != digits {
+                phoneNumber = digits
+            }
+        }
+    }
+    
+    public static let codeLength = 6
+    // TODO: Fix this not working
+    @Published var code = "" {
+        didSet {
+            let digits = code.filter { $0.isNumber }
+            if code != digits {
+                code = digits
+            }
+            
+            if code.count >= LoginManager.codeLength {
+                submitCode()
+            }
+        }
+    }
     
     init() {}
     

@@ -14,21 +14,20 @@ struct SignIn: View {
         if !manager.loggedIn {
             NavigationView {
                 GeometryReader { geo in
-                    HStack {
-                        Spacer()
-                        VStack {
-                            Spacer()
-                            Text("Please enter your phone number")
-                            textEntry.frame(width: geo.size.width * 0.85)
-                            NavigationLink("Submit") {
-                                CodeVerificationView()
-                            }
-                            .musicaLargeButton(.blue)
+                    VStack {
+                        Text("Please enter your phone number")
+                            
+                        textEntry
                             .frame(width: geo.size.width * 0.85)
-                            Spacer()
+                        NavigationLink("Submit") {
+                            CodeVerificationView(manager: manager)
+                                .navigationBarHidden(true)
+                                .navigationBarBackButtonHidden(true)
                         }
-                        Spacer()
+                        .musicaLargeButton(.blue)
+                        .frame(width: geo.size.width * 0.85)
                     }
+                    .position(x: geo.size.width / 2.0, y: geo.size.height * 0.85 / 2.0)
                 }
             }
         } else {

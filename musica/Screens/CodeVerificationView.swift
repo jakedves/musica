@@ -8,12 +8,17 @@
 import SwiftUI
 
 struct CodeVerificationView: View {
-    @State var mystring = ""
+    @StateObject var manager: LoginManager
     
     var body: some View {
         VStack {
             Text("Please enter your code")
-            TextField("Code", text: $mystring)
+            TextField("Code", text: $manager.code)
+                .keyboardType(.decimalPad)
+                .multilineTextAlignment(.center)
+                .padding()
+                .background(.quaternary)
+                .cornerRadius(15.0)
             Button("Submit") {}
                 .musicaLargeButton(.blue)
         }
@@ -23,6 +28,6 @@ struct CodeVerificationView: View {
 
 struct CodeVerificationView_Previews: PreviewProvider {
     static var previews: some View {
-        CodeVerificationView()
+        CodeVerificationView(manager: LoginManager())
     }
 }
