@@ -20,7 +20,8 @@ struct MainView: View {
             case .explore:
                 Explore()
             case .login:
-                Login()
+                Explore()
+                //Login(ma)
             }
             NavigatorView(f1: { setScreen(to: .explore) },
                           f2: { setScreen(to: .profile) },

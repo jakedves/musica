@@ -7,52 +7,46 @@
 
 import SwiftUI
 
-enum SignInMethod {
-    case phone
-    case apple
-}
-
 struct SignIn: View {
-    @State var entry: String = ""
+    @ObservedObject var manager: LoginManager
     
     var body: some View {
-        NavigationView {
-            GeometryReader { geo in
-                HStack {
-                    Spacer()
-                    VStack {
+        if !manager.loggedIn {
+            NavigationView {
+                GeometryReader { geo in
+                    HStack {
                         Spacer()
-                        Text("Please enter your phone number")
-                        textEntry.frame(width: geo.size.width * 0.85)
-                        NavigationLink("Submit") {
-                            // TODO: Submit => Verify Code => MainView().navigationBarHidden(true).navigationBarBackButtonHidden(true)
-                            MainView()
-                                .navigationBarBackButtonHidden(true)
-                                .navigationBarTitle("")
-                                .navigationBarHidden(true)
+                        VStack {
+                            Spacer()
+                            Text("Please enter your phone number")
+                            textEntry.frame(width: geo.size.width * 0.85)
+                            NavigationLink("Submit") {
+                                CodeVerificationView()
+                            }
+                            .musicaLargeButton(.blue)
+                            .frame(width: geo.size.width * 0.85)
+                            Spacer()
                         }
-                        .musicaLargeButton(.blue)
-                        .frame(width: geo.size.width * 0.85)
                         Spacer()
                     }
-                    Spacer()
                 }
             }
+        } else {
+            MainView()
         }
     }
     
     private var textEntry: some View {
-        TextField("Phone Number", text: $entry)
+        TextField("Phone Number", text: $manager.phoneNumber)
             .textContentType(.telephoneNumber)
             .padding()
             .background(.quaternary)
             .cornerRadius(15.0)
-            
     }
 }
 
 struct SignIn_Previews: PreviewProvider {
     static var previews: some View {
-        SignIn()
+        SignIn(manager: LoginManager())
     }
 }
