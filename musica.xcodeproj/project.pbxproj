@@ -112,13 +112,11 @@
 		5072CE72286036E1006F3D64 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				50A698822872393400222085 /* Login */,
+				50A698822872393400222085 /* Login Process */,
 				50A6987F287234B800222085 /* Profile */,
 				5072CE7528603875006F3D64 /* Explore.swift */,
 				508190F6286BAC10004B3F45 /* MainView.swift */,
 				50A698762871BE1B00222085 /* Routines.swift */,
-				50A6987A2872042900222085 /* SignIn.swift */,
-				50A6988328723B1600222085 /* CodeVerificationView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -158,13 +156,15 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		50A698822872393400222085 /* Login */ = {
+		50A698822872393400222085 /* Login Process */ = {
 			isa = PBXGroup;
 			children = (
 				5072CE6E2860316A006F3D64 /* Login.swift */,
 				50A698802872351500222085 /* LoginManager.swift */,
+				50A6987A2872042900222085 /* SignIn.swift */,
+				50A6988328723B1600222085 /* CodeVerificationView.swift */,
 			);
-			path = Login;
+			path = "Login Process";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
