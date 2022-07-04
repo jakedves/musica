@@ -57,18 +57,11 @@ struct Profile: View {
     // TODO: Replace with a ProfileHighlights view
     private var highlights: some View {
         LazyVGrid(columns: [GridItem(), GridItem(), GridItem()]) {
-            // ForEach (user.highlights) { highlight in HighlightView(highlight) }
-            Button {
-            } label: {
-                Highlight()
-            }
-            Button {
-            } label: {
-                Highlight()
-            }
-            Button {
-            } label: {
-                Highlight()
+            ForEach (user.highlightPointers, id: \.self) { pointer in
+                Button {
+                } label: {
+                    Highlight(thumbnailUIImage: ProfileViewModel.getHighlightThumbnail(id: pointer))
+                }
             }
         }
         .foregroundColor(.white)

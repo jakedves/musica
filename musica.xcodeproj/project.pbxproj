@@ -31,6 +31,7 @@
 		50A6987D2872311300222085 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A6987C2872311300222085 /* ProfileViewModel.swift */; };
 		50A698812872351500222085 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698802872351500222085 /* LoginManager.swift */; };
 		50A6988428723B1600222085 /* CodeVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A6988328723B1600222085 /* CodeVerificationView.swift */; };
+		50A698862873665B00222085 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698852873665B00222085 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		50A6987C2872311300222085 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		50A698802872351500222085 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		50A6988328723B1600222085 /* CodeVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationView.swift; sourceTree = "<group>"; };
+		50A698852873665B00222085 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				5072CE72286036E1006F3D64 /* Screens */,
 				50260D41285EB10D00175ACF /* Assets.xcassets */,
 				50260D43285EB10D00175ACF /* Preview Content */,
+				50A698852873665B00222085 /* Utilities.swift */,
 			);
 			path = musica;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				50260D50285EC29F00175ACF /* AppUser.swift in Sources */,
 				50260D4E285EBEBB00175ACF /* MusicaUser.swift in Sources */,
 				50A6987B2872042900222085 /* SignIn.swift in Sources */,
+				50A698862873665B00222085 /* Utilities.swift in Sources */,
 				50260D52285EC3D500175ACF /* MusicaVideo.swift in Sources */,
 				5072CE6F2860316A006F3D64 /* Login.swift in Sources */,
 				5072CE7C2860EA54006F3D64 /* NavigatorView.swift in Sources */,

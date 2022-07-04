@@ -8,16 +8,26 @@
 import SwiftUI
 
 struct Highlight: View {
+    var thumbnailUIImage: UIImage
+    
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            // Image(): Thumbnail for the video, for now Color.red at 16:9 ratio
-            Constants.dummyThumbnail
+            // TODO: Fix image dimensions, however if calculated from 720p video, should be 9:16 by default
+            thumbnail
+                .aspectRatio(Constants.aspectRatio, contentMode: .fill)
+
             overlay
                 .padding([.vertical], Constants.vpad)
                 .padding([.horizontal], Constants.hpad)
         }
         .aspectRatio(Constants.aspectRatio, contentMode: .fit)
         .cornerRadius(Constants.highlightCorner)
+    }
+    
+    var thumbnail: some View {
+        Image(uiImage: thumbnailUIImage)
+            .resizable()
+            
     }
     
     var likeCount: some View {
@@ -70,6 +80,6 @@ struct Highlight: View {
 
 struct Highlight_Previews: PreviewProvider {
     static var previews: some View {
-        Highlight()
+        Highlight(thumbnailUIImage: UIImage(named: "Test")!)
     }
 }
