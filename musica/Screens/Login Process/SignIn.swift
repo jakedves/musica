@@ -32,6 +32,9 @@ struct SignIn: View {
             }
         } else {
             MainView()
+                // to get here, must be logged in regardless
+                .navigationBarHidden(true)
+                .navigationBarHidden(true)
         }
     }
     
