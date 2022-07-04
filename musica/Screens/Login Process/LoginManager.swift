@@ -42,7 +42,7 @@ class LoginManager: ObservableObject {
     
     init() {}
     
-    func logInSuccess() {
+    func loginSuccess() {
         // set AppUser here with a network call
         self.loggedIn = true
     }
@@ -54,6 +54,6 @@ class LoginManager: ObservableObject {
     
     func submitCode() {
         // check verification code
-        // loggedIn.toggle()
+        // loginSuccess()
     }
 }
