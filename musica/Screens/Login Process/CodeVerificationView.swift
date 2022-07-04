@@ -19,7 +19,10 @@ struct CodeVerificationView: View {
                 .padding()
                 .background(.quaternary)
                 .cornerRadius(15.0)
-            Button("Submit") {}
+            Button("Submit") {
+                // TODO: Replace this, make method private
+                manager.loginSuccess()
+            }
                 .musicaLargeButton(.blue)
         }
         .padding()
