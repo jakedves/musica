@@ -29,6 +29,8 @@
 		50A698792871E31C00222085 /* MusicaBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698782871E31C00222085 /* MusicaBackground.swift */; };
 		50A6987B2872042900222085 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A6987A2872042900222085 /* SignIn.swift */; };
 		50A6987D2872311300222085 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A6987C2872311300222085 /* ProfileViewModel.swift */; };
+		50A698812872351500222085 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698802872351500222085 /* LoginManager.swift */; };
+		50A6988428723B1600222085 /* CodeVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A6988328723B1600222085 /* CodeVerificationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		50A698782871E31C00222085 /* MusicaBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaBackground.swift; sourceTree = "<group>"; };
 		50A6987A2872042900222085 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		50A6987C2872311300222085 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		50A698802872351500222085 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		50A6988328723B1600222085 /* CodeVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,12 +112,13 @@
 		5072CE72286036E1006F3D64 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				5072CE6E2860316A006F3D64 /* Login.swift */,
+				50A698822872393400222085 /* Login */,
 				50A6987F287234B800222085 /* Profile */,
 				5072CE7528603875006F3D64 /* Explore.swift */,
 				508190F6286BAC10004B3F45 /* MainView.swift */,
 				50A698762871BE1B00222085 /* Routines.swift */,
 				50A6987A2872042900222085 /* SignIn.swift */,
+				50A6988328723B1600222085 /* CodeVerificationView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -151,6 +156,15 @@
 				50260D4B285EB48B00175ACF /* Profile.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		50A698822872393400222085 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5072CE6E2860316A006F3D64 /* Login.swift */,
+				50A698802872351500222085 /* LoginManager.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +239,7 @@
 			files = (
 				5072CE7A28604332006F3D64 /* AppData.swift in Sources */,
 				5072CE6B285FFCF8006F3D64 /* Glass.swift in Sources */,
+				50A6988428723B1600222085 /* CodeVerificationView.swift in Sources */,
 				508816D8286FB9720045196A /* Highlight.swift in Sources */,
 				50260D54285EC63C00175ACF /* TagView.swift in Sources */,
 				50260D56285EC7C800175ACF /* TagList.swift in Sources */,
@@ -243,6 +258,7 @@
 				50A698792871E31C00222085 /* MusicaBackground.swift in Sources */,
 				508190F7286BAC10004B3F45 /* MainView.swift in Sources */,
 				5072CE71286034AB006F3D64 /* MusicaLargeButton.swift in Sources */,
+				50A698812872351500222085 /* LoginManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
