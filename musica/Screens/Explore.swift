@@ -14,7 +14,7 @@ struct Explore: View {
         ZStack {
             ScrollView {
                 VStack(spacing: 0.0) {
-                    Label("Explore", systemImage: "magnifyingglass")
+                    Label(Constants.title, systemImage: Constants.icon)
                         .font(.bold(Font.title2)())
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
                         let tags = engine.getAllTags()
@@ -30,6 +30,11 @@ struct Explore: View {
                 }
             }
         }
+    }
+    
+    private struct Constants {
+        static let title = "Explore"
+        static let icon = "magnifyingglass"
     }
 }
 
