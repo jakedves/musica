@@ -120,11 +120,19 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		502681632874BD00005A06EB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				508954C2287377A100F72B5C /* SearchEngine.swift */,
+				508190F6286BAC10004B3F45 /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		5072CE72286036E1006F3D64 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				508190F6286BAC10004B3F45 /* MainView.swift */,
-				508954C2287377A100F72B5C /* SearchEngine.swift */,
+				502681632874BD00005A06EB /* Main */,
 				50A698822872393400222085 /* Login Process */,
 				50A6987F287234B800222085 /* Profile */,
 				5072CE7528603875006F3D64 /* Explore.swift */,
