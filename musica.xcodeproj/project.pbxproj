@@ -28,6 +28,7 @@
 		508954C3287377A100F72B5C /* SearchEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508954C2287377A100F72B5C /* SearchEngine.swift */; };
 		508954C528738E4800F72B5C /* MusicaRetrievable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508954C428738E4800F72B5C /* MusicaRetrievable.swift */; };
 		508954C72873923D00F72B5C /* RoutineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508954C62873923D00F72B5C /* RoutineView.swift */; };
+		508954C92873970800F72B5C /* Routine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508954C82873970800F72B5C /* Routine.swift */; };
 		50A698772871BE1B00222085 /* Routines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698762871BE1B00222085 /* Routines.swift */; };
 		50A698792871E31C00222085 /* MusicaBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698782871E31C00222085 /* MusicaBackground.swift */; };
 		50A6987B2872042900222085 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A6987A2872042900222085 /* SignIn.swift */; };
@@ -60,6 +61,7 @@
 		508954C2287377A100F72B5C /* SearchEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEngine.swift; sourceTree = "<group>"; };
 		508954C428738E4800F72B5C /* MusicaRetrievable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaRetrievable.swift; sourceTree = "<group>"; };
 		508954C62873923D00F72B5C /* RoutineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutineView.swift; sourceTree = "<group>"; };
+		508954C82873970800F72B5C /* Routine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routine.swift; sourceTree = "<group>"; };
 		50A698762871BE1B00222085 /* Routines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routines.swift; sourceTree = "<group>"; };
 		50A698782871E31C00222085 /* MusicaBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaBackground.swift; sourceTree = "<group>"; };
 		50A6987A2872042900222085 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				508816D7286FB9720045196A /* Highlight.swift */,
 				50A698782871E31C00222085 /* MusicaBackground.swift */,
 				508954C62873923D00F72B5C /* RoutineView.swift */,
+				508954C82873970800F72B5C /* Routine.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				50260D4C285EB48B00175ACF /* Profile.swift in Sources */,
 				50260D3E285EB10700175ACF /* musicaApp.swift in Sources */,
 				50A698792871E31C00222085 /* MusicaBackground.swift in Sources */,
+				508954C92873970800F72B5C /* Routine.swift in Sources */,
 				508190F7286BAC10004B3F45 /* MainView.swift in Sources */,
 				5072CE71286034AB006F3D64 /* MusicaLargeButton.swift in Sources */,
 				50A698812872351500222085 /* LoginManager.swift in Sources */,
