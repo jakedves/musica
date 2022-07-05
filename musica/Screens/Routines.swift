@@ -12,12 +12,15 @@ struct Routines: View {
     
     var body: some View {
         VStack {
-            Text("routines")
+            Text("Routines")
+                .bold()
             List {
                 ForEach(routines, id: \.self) { routine in
-                    Text(String(routine))
+                    RoutineView(routine: Routine())
+                        .listRowBackground(EmptyView())
                 }
             }
+            .listStyle(.plain)
         }
     }
 }

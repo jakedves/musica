@@ -37,7 +37,7 @@ struct RoutineView: View {
             }
             .padding()
         }
-        .padding()
+        //.padding()
     }
     
     private struct Constants {
