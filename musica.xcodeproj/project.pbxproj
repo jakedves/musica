@@ -16,6 +16,7 @@
 		50260D52285EC3D500175ACF /* MusicaVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D51285EC3D500175ACF /* MusicaVideo.swift */; };
 		50260D54285EC63C00175ACF /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D53285EC63C00175ACF /* TagView.swift */; };
 		50260D56285EC7C800175ACF /* TagList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50260D55285EC7C800175ACF /* TagList.swift */; };
+		502681652874BDD1005A06EB /* ExploreResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502681642874BDD1005A06EB /* ExploreResults.swift */; };
 		5072CE6B285FFCF8006F3D64 /* Glass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072CE6A285FFCF8006F3D64 /* Glass.swift */; };
 		5072CE6F2860316A006F3D64 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072CE6E2860316A006F3D64 /* Login.swift */; };
 		5072CE71286034AB006F3D64 /* MusicaLargeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072CE70286034AB006F3D64 /* MusicaLargeButton.swift */; };
@@ -36,6 +37,8 @@
 		50A698812872351500222085 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698802872351500222085 /* LoginManager.swift */; };
 		50A6988428723B1600222085 /* CodeVerificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A6988328723B1600222085 /* CodeVerificationView.swift */; };
 		50A698862873665B00222085 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A698852873665B00222085 /* Utilities.swift */; };
+		50CCB1D62875C6F500227232 /* ProfileCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCB1D52875C6F500227232 /* ProfileCard.swift */; };
+		50CCB1D82875CEF600227232 /* VideoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CCB1D72875CEF600227232 /* VideoCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,7 @@
 		50260D51285EC3D500175ACF /* MusicaVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaVideo.swift; sourceTree = "<group>"; };
 		50260D53285EC63C00175ACF /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		50260D55285EC7C800175ACF /* TagList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagList.swift; sourceTree = "<group>"; };
+		502681642874BDD1005A06EB /* ExploreResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreResults.swift; sourceTree = "<group>"; };
 		5072CE6A285FFCF8006F3D64 /* Glass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glass.swift; sourceTree = "<group>"; };
 		5072CE6E2860316A006F3D64 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		5072CE70286034AB006F3D64 /* MusicaLargeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicaLargeButton.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 		50A698802872351500222085 /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		50A6988328723B1600222085 /* CodeVerificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVerificationView.swift; sourceTree = "<group>"; };
 		50A698852873665B00222085 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		50CCB1D52875C6F500227232 /* ProfileCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCard.swift; sourceTree = "<group>"; };
+		50CCB1D72875CEF600227232 /* VideoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 				50A6987F287234B800222085 /* Profile */,
 				5072CE7528603875006F3D64 /* Explore.swift */,
 				50A698762871BE1B00222085 /* Routines.swift */,
+				502681642874BDD1005A06EB /* ExploreResults.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -154,6 +161,8 @@
 				50A698782871E31C00222085 /* MusicaBackground.swift */,
 				508954C62873923D00F72B5C /* RoutineView.swift */,
 				508954C82873970800F72B5C /* Routine.swift */,
+				50CCB1D52875C6F500227232 /* ProfileCard.swift */,
+				50CCB1D72875CEF600227232 /* VideoCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -261,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5072CE7A28604332006F3D64 /* AppData.swift in Sources */,
+				50CCB1D82875CEF600227232 /* VideoCard.swift in Sources */,
 				5072CE6B285FFCF8006F3D64 /* Glass.swift in Sources */,
 				50A6988428723B1600222085 /* CodeVerificationView.swift in Sources */,
 				508954C528738E4800F72B5C /* MusicaRetrievable.swift in Sources */,
@@ -270,6 +280,7 @@
 				50260D56285EC7C800175ACF /* TagList.swift in Sources */,
 				50A698772871BE1B00222085 /* Routines.swift in Sources */,
 				5072CE7628603875006F3D64 /* Explore.swift in Sources */,
+				50CCB1D62875C6F500227232 /* ProfileCard.swift in Sources */,
 				5072CE7828604169006F3D64 /* TagBox.swift in Sources */,
 				50260D50285EC29F00175ACF /* AppUser.swift in Sources */,
 				50260D4E285EBEBB00175ACF /* MusicaUser.swift in Sources */,
@@ -284,6 +295,7 @@
 				50260D3E285EB10700175ACF /* musicaApp.swift in Sources */,
 				50A698792871E31C00222085 /* MusicaBackground.swift in Sources */,
 				508954C92873970800F72B5C /* Routine.swift in Sources */,
+				502681652874BDD1005A06EB /* ExploreResults.swift in Sources */,
 				508190F7286BAC10004B3F45 /* MainView.swift in Sources */,
 				5072CE71286034AB006F3D64 /* MusicaLargeButton.swift in Sources */,
 				50A698812872351500222085 /* LoginManager.swift in Sources */,
