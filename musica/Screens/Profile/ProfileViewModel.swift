@@ -19,6 +19,7 @@ class ProfileViewModel: ObservableObject {
     @Published var highlightThumbnails = [Data?]()
     
     init(id: UUID) {
+        // load the user here
         userID = id
         name = "Jake"
         bio = "This is my bio."
