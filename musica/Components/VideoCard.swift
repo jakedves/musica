@@ -5,11 +5,13 @@
 //  Created by Jake Davies on 06/07/2022.
 //
 
+import AVKit
 import SwiftUI
 
 struct VideoCard: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        EmptyView()
+        // VideoPlayer(player: AVPlayer(url: URL(string: "https://")!))
     }
 }
 
