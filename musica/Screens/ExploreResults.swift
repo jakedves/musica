@@ -14,18 +14,20 @@ enum ContentType {
 
 struct ExploreResults: View {
     @EnvironmentObject private var engine: SearchEngine
-    @State private var type: ContentType = .video
+    @State private var type: ContentType = .profile
     
     var body: some View {
-        VStack {
-            overlay
-            switch type {
-            case .video:
-                EmptyView() // place video view
-            case .profile:
-                ProfileCard()
+        GeometryReader { geo in
+            VStack {
+                overlay
+                switch type {
+                case .video:
+                    EmptyView() // place video view
+                case .profile:
+                    ProfileCard()
+                }
+                Spacer()
             }
-            Spacer()
         }
     }
     
@@ -43,7 +45,6 @@ struct ExploreResults: View {
                 .onTapGesture { self.type = .profile }
             Spacer()
         }
-        .padding()
     }
 }
 
