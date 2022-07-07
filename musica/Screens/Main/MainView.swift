@@ -21,7 +21,7 @@ struct MainView: View {
             case .explore:
                 Explore()
             case .routines:
-                Explore()
+                Routines()
             case .login:
                 Explore()
                 // Login()

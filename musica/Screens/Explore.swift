@@ -11,24 +11,34 @@ struct Explore: View {
     @EnvironmentObject private var engine: SearchEngine
     
     var body: some View {
-        ZStack {
-            ScrollView {
-                VStack(spacing: 0.0) {
-                    Label(Constants.title, systemImage: Constants.icon)
-                        .font(.bold(Font.title2)())
+        NavigationView {
+            VStack {
+                ScrollView {
                     LazyVGrid(columns: [GridItem(), GridItem()]) {
                         let tags = engine.getAllTags()
                         ForEach (0..<tags.count, id: \.self) { index in
-                            Button {
-                                // navigate to a ExplorePage(Explorer(content: tag.0))
-                            } label: {
+                            NavigationLink(destination: ExploreResults(), label: {
                                 TagBox(tags[index])
-                            }
+                            })
                         }
                     }
-                    .padding()
+                    .padding([.horizontal])
+                }
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarLeading) {
+                        title
+                    }
                 }
             }
+        }
+    }
+    
+    private var title: some View {
+        HStack {
+            Image(systemName: Constants.icon)
+                .font(.bold(Font.title2)())
+            Text(Constants.title)
+                .font(.bold(Font.title)())
         }
     }
     
