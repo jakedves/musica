@@ -12,22 +12,20 @@ struct Explore: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                ScrollView {
-                    LazyVGrid(columns: [GridItem(), GridItem()]) {
-                        let tags = engine.getAllTags()
-                        ForEach (0..<tags.count, id: \.self) { index in
-                            NavigationLink(destination: ExploreResults(), label: {
-                                TagBox(tags[index])
-                            })
-                        }
+            ScrollView {
+                LazyVGrid(columns: [GridItem(), GridItem()]) {
+                    let tags = engine.getAllTags()
+                    ForEach (0..<tags.count, id: \.self) { index in
+                        NavigationLink(destination: ExploreResults(), label: {
+                            TagBox(tags[index])
+                        })
                     }
-                    .padding([.horizontal])
                 }
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        title
-                    }
+                .padding([.horizontal])
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    title
                 }
             }
         }
