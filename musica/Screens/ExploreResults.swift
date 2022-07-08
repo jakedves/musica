@@ -29,6 +29,8 @@ struct ExploreResults: View {
                 Spacer()
             }
         }
+        .navigationBarHidden(true)
+        .navigationBarBackButtonHidden(true)
     }
     
     private var overlay: some View {
