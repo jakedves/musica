@@ -53,8 +53,10 @@ class LoginManager: ObservableObject {
     
     /**
      Ran once a login has been succesful. Sets the user.
+     
+     TODO: MAKE PRIVATE (once attemptLogin() is available)
      */
-    private func loginSuccess() {
+    func loginSuccess() {
         // set AppUser here with a network call
         self.loggedIn = true
     }
