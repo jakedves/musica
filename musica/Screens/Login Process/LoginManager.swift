@@ -12,6 +12,15 @@ enum SignInMethod {
     case apple
 }
 
+/**
+ This class represents the logic for the login process.
+ 
+ - Parameter method: how the user is signing in
+ - Parameter loggedIn: whether a user is logged in
+ - Parameter loginFailed: whether a log in has been unsuccessful
+ - Parameter phoneNumber: the input for a user's phone number
+ - Parameter code: the verification code the user is entering
+ */
 class LoginManager: ObservableObject {
     @Published var method: SignInMethod?
     @Published var loggedIn = false
@@ -42,16 +51,27 @@ class LoginManager: ObservableObject {
     
     init() {}
     
-    func loginSuccess() {
+    /**
+     Ran once a login has been succesful. Sets the user.
+     */
+    private func loginSuccess() {
         // set AppUser here with a network call
         self.loggedIn = true
     }
     
+    /**
+     This method will check if the number exists in the database, and will initiate
+     a request for sending a  verification code.
+     */
     func submitPhoneNumber() {
         // check number on server
         // send number code
     }
     
+    /**
+     This method will check the verification code against the one that has been sent, and will
+     then call either `loginSuccess()` or `loginFailure()`.
+    */
     func submitCode() {
         // check verification code
         // loginSuccess()
