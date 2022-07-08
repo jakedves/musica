@@ -8,6 +8,10 @@
 import Foundation
 import SwiftUI
 
+/**
+ This class represents the main view model of this application. It contains the data used for searching
+ and retrieving videos and profiles.
+ */
 class SearchEngine: ObservableObject {
     @Published var genres: [(String, Color)] = []
     @Published var instruments: [(String, Color)] = []
@@ -19,8 +23,10 @@ class SearchEngine: ObservableObject {
         setAchievements()
     }
     
+    /** - Returns: A list of all possible tags */
     func getAllTags() -> [(String, Color)] { genres + instruments + achievements }
     
+    /** Sets the initial list of all genre tags */
     private func setGenres() {
         self.genres = [("rock", .red),
                        ("pop", .purple),
@@ -31,6 +37,7 @@ class SearchEngine: ObservableObject {
                        ("progressive", .yellow)]
     }
     
+    /** Sets the initial list of all instrument tags */
     private func setInstruments() {
         self.instruments = [("guitar", .red),
                             ("piano", .blue),
@@ -42,16 +49,22 @@ class SearchEngine: ObservableObject {
                             ("vocals", .blue)]
     }
     
+    /** Sets the initial list of all achievement tags */
     private func setAchievements() {
         self.achievements = [("app creator", .blue)]
     }
     
-    // random order
+    /** Retrieves a list of random retrieveables */
     public func retrieve<MusicaRetrievable>() -> [MusicaRetrievable] {
         // TODO: Implement this
         []
     }
     
+    /**
+     Retrieves a list of retrieveables related to a query
+     
+     - Parameter query: The string part of a tag (or later, caption etc.) to search the database for
+     */
     public func retrieve<MusicaBulkRetrievable>(query: String) -> [MusicaBulkRetrievable] {
         // TODO: Implement this
         []
