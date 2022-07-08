@@ -16,31 +16,47 @@ struct Login: View {
     
     var body: some View {
         NavigationView {
-            ZStack {
-                VStack {
-                    Spacer()
-                    Text(Constants.title)
-                        .font(.system(size: Constants.titleFontSize).bold())
-                    Text(Constants.tagline)
-                        .offset(x: 0.0, y: -8.0)
-                    Spacer()
-                    // TODO: add SFSymbols phone icon
-                    NavigationLink("Sign in with Phone Number") {
+            VStack {
+                Spacer()
+                    logo
+                Spacer()
+                // TODO: add SFSymbols phone icon
+                
+                // TODO: Change from NavigationView and Link, space cannot be removed at all due to SwiftUI
+                // TODO: Refactor such that NavigationView and Link isn't used, and such that users can still navigate between screens. Maybe button moves up, becomes a back button, logo and other buttons fade away...
+                NavigationLink("Sign in with Phone Number") {
+                    // Space does get removed when both SignIn and MainView have (true) [not variable]
+                    if !manager.loggedIn {
                         SignIn(manager: manager)
-                        // TODO: THIS DOESN'T UPDATE WHEN SET TO TRUE
-                            .navigationBarHidden(manager.loggedIn)
-                            .navigationBarBackButtonHidden(manager.loggedIn)
-                    }.musicaLargeButton(.blue)
-                    
-                    // TODO: replace with actual Apple button and add functionality
-                    Button("Sign in with Apple", action: {
-                        // manager.appleSignIn()
-                    })
-                    .musicaLargeButton(.black)
-                    Spacer()
+                            .navigationBarBackButtonHidden(false)
+                            .navigationBarHidden(true)
+                    } else {
+                        MainView()
+                        // this works
+                            .navigationBarBackButtonHidden(true)
+                            .navigationBarHidden(true)
+                    }
                 }
-                .padding()
+                .musicaLargeButton(.blue)
+                // navHidden doesn't affect subviews
+                
+                // TODO: replace with actual Apple button and add functionality
+                Button("Sign in with Apple", action: {
+                    // manager.appleSignIn()
+                })
+                .musicaLargeButton(.black)
+                Spacer()
             }
+            .padding()
+        }
+    }
+    
+    private var logo: some View {
+        Group {
+            Text(Constants.title)
+                .font(.system(size: Constants.titleFontSize).bold())
+            Text(Constants.tagline)
+                .offset(x: 0.0, y: -8.0)
         }
     }
     

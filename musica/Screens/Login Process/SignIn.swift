@@ -11,30 +11,23 @@ struct SignIn: View {
     @ObservedObject var manager: LoginManager
     
     var body: some View {
-        if !manager.loggedIn {
-            NavigationView {
-                GeometryReader { geo in
-                    VStack {
-                        Text("Please enter your phone number")
-                            
-                        textEntry
-                            .frame(width: geo.size.width * 0.85)
-                        NavigationLink("Submit") {
-                            CodeVerificationView(manager: manager)
-                                .navigationBarHidden(true)
-                                .navigationBarBackButtonHidden(true)
-                        }
-                        .musicaLargeButton(.blue)
+        NavigationView {
+            GeometryReader { geo in
+                VStack {
+                    Text("Please enter your phone number")
+                        
+                    textEntry
                         .frame(width: geo.size.width * 0.85)
+                    NavigationLink("Submit") {
+                        CodeVerificationView(manager: manager)
+                            .navigationBarHidden(true)
+                            .navigationBarBackButtonHidden(true)
                     }
-                    .position(x: geo.size.width / 2.0, y: geo.size.height * 0.85 / 2.0)
+                    .musicaLargeButton(.blue)
+                    .frame(width: geo.size.width * 0.85)
                 }
+                .position(x: geo.size.width / 2.0, y: geo.size.height * 0.85 / 2.0)
             }
-        } else {
-            MainView()
-                // to get here, must be logged in regardless
-                .navigationBarHidden(true)
-                .navigationBarBackButtonHidden(true)
         }
     }
     
