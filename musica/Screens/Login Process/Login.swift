@@ -24,9 +24,10 @@ struct Login: View {
                     Text(Constants.tagline)
                         .offset(x: 0.0, y: -8.0)
                     Spacer()
-                    // TODO: add SFSymbols phone icon into "sign in with phone number"
+                    // TODO: add SFSymbols phone icon
                     NavigationLink("Sign in with Phone Number") {
                         SignIn(manager: manager)
+                        // TODO: THIS DOESN'T UPDATE WHEN SET TO TRUE
                             .navigationBarHidden(manager.loggedIn)
                             .navigationBarBackButtonHidden(manager.loggedIn)
                     }.musicaLargeButton(.blue)
